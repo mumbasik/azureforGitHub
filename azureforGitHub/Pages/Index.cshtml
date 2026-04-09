@@ -4,7 +4,37 @@
     ViewData["Title"] = "Home page";
 }
 
+<style>
+    .text-center {
+        text-align: center;
+		color: burlywood;
+        border: 1px solid black;
+	}
+    button {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+		cursor: pointer;
+    }
+
+</style>
+
 <div class="text-center">
     <h1>For Azure.</h1>
     <p>It's working.'</p>
+    <button onclick="changeBG()">Change Background</button>
 </div>
+<script>
+    function changeBG() {
+        document.body.style.backgroundColor = "black";
+		document.body.style.color = "white";
+    }
+</script>
+
+
