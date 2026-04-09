@@ -27,14 +27,26 @@
 
 <div class="text-center">
     <h1>For Azure.</h1>
-    <p>It's working.'</p>
+    <p>It's working.</p>
     <button onclick="changeBG()">Change Background</button>
 </div>
 <script>
-    function changeBG() {
-        document.body.style.backgroundColor = "black";
-		document.body.style.color = "white";
-    }
+    let isDark = false;
+
+      function changeBG() {
+		  const btn = document.querySelector("button");
+          if (!isDark) {
+              document.body.style.backgroundColor = "black";
+              document.body.style.color = "white";
+			  btn.textContent = "Light mode" ;
+              isDark = true;
+          } else {
+              document.body.style.backgroundColor = "white";
+              document.body.style.color = "black";
+			  btn.textContent = "Dark mode" ;
+              isDark = false;
+          }
+      }
 </script>
 
 
