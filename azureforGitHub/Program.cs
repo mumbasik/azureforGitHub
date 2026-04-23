@@ -19,6 +19,18 @@ namespace azureforGitHub
                 app.UseHsts();
             }
 
+            app.MapGet("/api/hell0", () => { 
+
+                return new  { 
+                    Message = "Hello from Azure for GitHub!",
+                    Level = "F",
+                    Project = "Azure for GitHub",
+
+                };
+            
+
+            });
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
